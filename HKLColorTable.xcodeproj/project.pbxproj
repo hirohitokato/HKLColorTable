@@ -10,6 +10,8 @@
 		1AC8C0011CC1F69B00ABFE56 /* HKLColorTable.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AC8C0001CC1F69B00ABFE56 /* HKLColorTable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1AC8C0081CC1F69B00ABFE56 /* HKLColorTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC8BFFD1CC1F69B00ABFE56 /* HKLColorTable.framework */; };
 		1AC8C00D1CC1F69B00ABFE56 /* HKLColorTableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC8C00C1CC1F69B00ABFE56 /* HKLColorTableTests.swift */; };
+		1AC8C01C1CC1F72000ABFE56 /* KSColorTable.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AC8C0181CC1F72000ABFE56 /* KSColorTable.h */; };
+		1AC8C01E1CC1F72000ABFE56 /* SUColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AC8C01A1CC1F72000ABFE56 /* SUColor.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,10 @@
 		1AC8C0071CC1F69B00ABFE56 /* HKLColorTableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HKLColorTableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AC8C00C1CC1F69B00ABFE56 /* HKLColorTableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKLColorTableTests.swift; sourceTree = "<group>"; };
 		1AC8C00E1CC1F69B00ABFE56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AC8C0181CC1F72000ABFE56 /* KSColorTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSColorTable.h; sourceTree = "<group>"; };
+		1AC8C0191CC1F72000ABFE56 /* KSColorTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSColorTable.m; sourceTree = "<group>"; };
+		1AC8C01A1CC1F72000ABFE56 /* SUColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUColor.h; sourceTree = "<group>"; };
+		1AC8C01B1CC1F72000ABFE56 /* SUColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUColor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,7 @@
 			children = (
 				1AC8C0001CC1F69B00ABFE56 /* HKLColorTable.h */,
 				1AC8C0021CC1F69B00ABFE56 /* Info.plist */,
+				1AC8C0171CC1F72000ABFE56 /* SUColor */,
 			);
 			path = HKLColorTable;
 			sourceTree = "<group>";
@@ -86,6 +93,17 @@
 			path = HKLColorTableTests;
 			sourceTree = "<group>";
 		};
+		1AC8C0171CC1F72000ABFE56 /* SUColor */ = {
+			isa = PBXGroup;
+			children = (
+				1AC8C0181CC1F72000ABFE56 /* KSColorTable.h */,
+				1AC8C0191CC1F72000ABFE56 /* KSColorTable.m */,
+				1AC8C01A1CC1F72000ABFE56 /* SUColor.h */,
+				1AC8C01B1CC1F72000ABFE56 /* SUColor.m */,
+			);
+			path = SUColor;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -93,6 +111,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AC8C01E1CC1F72000ABFE56 /* SUColor.h in Headers */,
 				1AC8C0011CC1F69B00ABFE56 /* HKLColorTable.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,6 +329,7 @@
 		1AC8C0121CC1F69B00ABFE56 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -320,12 +340,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.KatokichiSoft.HKLColorTable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		1AC8C0131CC1F69B00ABFE56 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
