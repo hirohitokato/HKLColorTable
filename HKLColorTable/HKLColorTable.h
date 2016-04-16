@@ -2,8 +2,8 @@
 //  HKLColorTable.h
 //  HKLColorTable
 //
-//  Created by 加藤寛人 on 2016/04/16.
-//  Copyright © 2016年 Hirohito Kato. All rights reserved.
+//  Created by Hirohito Kato on 2016/04/16.
+//  Copyright © 2016 Hirohito Kato. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

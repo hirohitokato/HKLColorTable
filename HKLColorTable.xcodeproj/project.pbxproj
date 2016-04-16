@@ -12,6 +12,7 @@
 		1AC8C00D1CC1F69B00ABFE56 /* HKLColorTableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC8C00C1CC1F69B00ABFE56 /* HKLColorTableTests.swift */; };
 		1AC8C01C1CC1F72000ABFE56 /* KSColorTable.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AC8C0181CC1F72000ABFE56 /* KSColorTable.h */; };
 		1AC8C01E1CC1F72000ABFE56 /* SUColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AC8C01A1CC1F72000ABFE56 /* SUColor.h */; };
+		1AC8C0211CC1F88600ABFE56 /* JpnJISColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC8C0201CC1F88600ABFE56 /* JpnJISColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		1AC8C0191CC1F72000ABFE56 /* KSColorTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSColorTable.m; sourceTree = "<group>"; };
 		1AC8C01A1CC1F72000ABFE56 /* SUColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUColor.h; sourceTree = "<group>"; };
 		1AC8C01B1CC1F72000ABFE56 /* SUColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUColor.m; sourceTree = "<group>"; };
+		1AC8C0201CC1F88600ABFE56 /* JpnJISColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JpnJISColors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				1AC8C0001CC1F69B00ABFE56 /* HKLColorTable.h */,
 				1AC8C0021CC1F69B00ABFE56 /* Info.plist */,
+				1AC8C0221CC1F88C00ABFE56 /* Sources */,
 				1AC8C0171CC1F72000ABFE56 /* SUColor */,
 			);
 			path = HKLColorTable;
@@ -104,6 +107,14 @@
 			path = SUColor;
 			sourceTree = "<group>";
 		};
+		1AC8C0221CC1F88C00ABFE56 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				1AC8C0201CC1F88600ABFE56 /* JpnJISColors.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -113,6 +124,7 @@
 			files = (
 				1AC8C01E1CC1F72000ABFE56 /* SUColor.h in Headers */,
 				1AC8C0011CC1F69B00ABFE56 /* HKLColorTable.h in Headers */,
+				1AC8C01C1CC1F72000ABFE56 /* KSColorTable.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AC8C0211CC1F88600ABFE56 /* JpnJISColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
