@@ -8,28 +8,8 @@
 
 import UIKit
 
-public struct HKLColor {
-    let name: String
-    let rgbHex: UInt32
-
-    internal init(name: String, rgbHex: UInt32) {
-        self.name = name
-        self.rgbHex = rgbHex
-    }
-
-    var uiColor: UIColor {
-        let r = CGFloat((rgbHex & 0x00FF0000) >> 16) / 255.0
-        let g = CGFloat((rgbHex & 0x0000FF00) >>  8) / 255.0
-        let b = CGFloat((rgbHex & 0x000000FF) >>  0) / 255.0
-        return UIColor(red: r, green: g, blue: b, alpha: 1)
-    }
-    var cgColor: CGColor {
-        return uiColor.CGColor
-    }
-}
-
 /// JIS common color names : http://www.colordic.org/w/
-public enum JpnJISColor: UInt {
+public enum JpnJISColor: Int {
     case TokiIro = 0      // JIS慣用色名 鴇色 / 0xf5c9c6
     case TsutsujiIro      // JIS慣用色名 躑躅色 / 0xef5b9c
     case SakuraIro        // JIS慣用色名 桜色 / 0xfeeeed
@@ -297,5 +277,36 @@ public enum JpnJISColor: UInt {
     case CharcoalGrey     // JIS慣用色名 チャコールグレイ / 0x4c444d
     case LampBlack        // JIS慣用色名 ランプブラック / 0x221816
     case Black            // JIS慣用色名 ブラック / 0x0d0116
+
+    /**
+     Returns japanese name of the color
+     - returns: the color name
+     */
+    public func name() -> String {
+        return jpnJISColors[self.rawValue].name
+    }
+
+    /**
+     Returns UIColor object of the color
+     - returns: UIColor object
+     */
+    public func uiColor() -> UIColor {
+        return UIColor(hexValue: jpnJISColors[self.rawValue].hex)
+    }
+
+    /**
+     Returns CGColor object of the color
+     - returns: CGColor object
+     */
+    public func cgColor() -> CGColor {
+        return self.uiColor().CGColor
+    }
+
+    /**
+     Returns the number of colors
+     */
+    public func count() -> Int {
+        return jpnJISColors.count
+    }
 }
 
