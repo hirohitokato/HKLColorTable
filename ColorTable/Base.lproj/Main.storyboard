@@ -38,7 +38,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="qEe-dU-rTa" kind="show" id="EQH-1F-shB"/>
+                                    <segue destination="qEe-dU-rTa" kind="show" identifier="ToDetail" id="EQH-1F-shB"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -53,16 +53,16 @@
             </objects>
             <point key="canvasLocation" x="325" y="503"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Color List View Controller-->
         <scene sceneID="88b-nO-owM">
             <objects>
-                <tableViewController id="qEe-dU-rTa" sceneMemberID="viewController">
+                <tableViewController id="qEe-dU-rTa" customClass="ColorListViewController" customModule="ColorTable" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="wUS-Tc-SEL">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Detail" textLabel="2sn-zL-N43" detailTextLabel="4Dm-wa-68D" style="IBUITableViewCellStyleValue1" id="pCU-wF-jHb">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Color" textLabel="2sn-zL-N43" detailTextLabel="4Dm-wa-68D" style="IBUITableViewCellStyleValue1" id="pCU-wF-jHb">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pCU-wF-jHb" id="RS9-fo-6dt">

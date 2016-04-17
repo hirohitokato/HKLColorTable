@@ -475,34 +475,17 @@ public enum JpnColor: Int {
     case TetsuIro           // 和色名 鉄色 / 0x005243
     case KuwanomiIro        // 和色名 桑の実色 / 0x55295b
     case AnkokuShoku        // 和色名 暗黒色 / 0x16160e
+}
 
-    /**
-     Returns japanese name of the color
-     - returns: the color name
-     */
+extension JpnColor: HKLColorTableRepresentable {
     public func name() -> String {
         return jpnColors[self.rawValue].name
     }
 
-    /**
-     Returns UIColor object of the color
-     - returns: UIColor object
-     */
     public func uiColor() -> UIColor {
         return UIColor(hexValue: jpnColors[self.rawValue].hex)
     }
 
-    /**
-     Returns CGColor object of the color
-     - returns: CGColor object
-     */
-    public func cgColor() -> CGColor {
-        return self.uiColor().CGColor
-    }
-
-    /**
-     Returns the number of colors
-     */
     public func count() -> Int {
         return jpnColors.count
     }

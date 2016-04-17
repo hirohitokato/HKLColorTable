@@ -1055,34 +1055,17 @@ public enum PantoneColor: Int {
     case No7546     // PANTONEカラー 7546 / 0x304547
     case No7547     // PANTONEカラー 7547 / 0x0a0f0f
     case NoBlack    // PANTONEカラー Black / 0x050403
+}
 
-    /**
-     Returns japanese name of the color
-     - returns: the color name
-     */
+extension PantoneColor: HKLColorTableRepresentable {
     public func name() -> String {
         return "PANTONE \(pantoneColors[self.rawValue].name)"
     }
 
-    /**
-     Returns UIColor object of the color
-     - returns: UIColor object
-     */
     public func uiColor() -> UIColor {
         return UIColor(hexValue: pantoneColors[self.rawValue].hex)
     }
 
-    /**
-     Returns CGColor object of the color
-     - returns: CGColor object
-     */
-    public func cgColor() -> CGColor {
-        return self.uiColor().CGColor
-    }
-
-    /**
-     Returns the number of colors
-     */
     public func count() -> Int {
         return pantoneColors.count
     }

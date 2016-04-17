@@ -2,8 +2,8 @@
 //  RootViewController.swift
 //  ColorTable
 //
-//  Created by 加藤寛人 on 2016/04/16.
-//  Copyright © 2016年 Hirohito Kato. All rights reserved.
+//  Created by Hirohito Kato on 2016/04/16.
+//  Copyright © 2016 Hirohito Kato. All rights reserved.
 //
 
 import UIKit
@@ -26,9 +26,37 @@ private func numColors(colors: String) -> Int {
     case "PANTONE":
         return PantoneColor.No100.count()
     default:
+        fatalError("Invalid color name")
         break
     }
-    return 0
+}
+
+private func colorArray(colors: String) -> [HKLColorTableRepresentable] {
+    let count = numColors(colors)
+
+    let f: (Int) -> HKLColorTableRepresentable
+
+    switch colors {
+    case "JIS Colors":
+        f = { JpnJISColor(rawValue: $0)! }
+    case "Japanese traditional colors":
+        f = { JpnColor(rawValue: $0)! }
+    case "Common colors":
+        f = { CommonColor(rawValue: $0)! }
+    case "Web color":
+        f = { WebColor(rawValue: $0)! }
+    case "PANTONE":
+        f = { PantoneColor(rawValue: $0)! }
+    default:
+        fatalError("Invalid color name")
+        break
+    }
+
+    var array = [HKLColorTableRepresentable]()
+    for i in 0..<count {
+        array.append(f(i))
+    }
+    return array
 }
 
 class RootViewController: UITableViewController {
@@ -58,3 +86,17 @@ extension RootViewController {
     }
 }
 
+extension RootViewController {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        switch segue.identifier! {
+        case "ToDetail":
+            if let nextVc = segue.destinationViewController as? ColorListViewController {
+                let title = items[tableView.indexPathForSelectedRow!.row]
+                nextVc.title = title
+                nextVc.colors = colorArray(title)
+            }
+        default:
+            break
+        }
+    }
+}

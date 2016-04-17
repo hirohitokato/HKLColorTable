@@ -8,7 +8,7 @@
 Pod::Spec.new do |s|
   s.name             = "HKLColorTable"
   s.version          = "0.1.0"
-  s.summary          = "A short description of ${POD_NAME}."
+  s.summary          = "Color library of Japanese colors."
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 
   s.homepage         = "https://github.com/<GITHUB_USERNAME>/${POD_NAME}"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
-  s.license          = 'MIT'
+  s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { "Hirohito Kato" => "hkato193@gmail.com" }
   s.source           = { :git => "https://github.com/hirohitokato/HKLColorTable.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/hkato193'

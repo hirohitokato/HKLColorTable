@@ -295,34 +295,17 @@ public enum CommonColor: Int {
     case Ultramarine         // 慣用色名 ウルトラマリン / 0x434da2
     case OldRose             // 慣用色名 オールドローズ / 0xe29399
     case Black               // 慣用色名 ブラック / 0x000000
-    
-    /**
-     Returns japanese name of the color
-     - returns: the color name
-     */
+}
+
+extension CommonColor: HKLColorTableRepresentable {
     public func name() -> String {
         return commonKatakanaNameColors[self.rawValue].name
     }
     
-    /**
-     Returns UIColor object of the color
-     - returns: UIColor object
-     */
     public func uiColor() -> UIColor {
         return UIColor(hexValue: commonKatakanaNameColors[self.rawValue].hex)
     }
     
-    /**
-     Returns CGColor object of the color
-     - returns: CGColor object
-     */
-    public func cgColor() -> CGColor {
-        return self.uiColor().CGColor
-    }
-
-    /**
-     Returns the number of colors
-     */
     public func count() -> Int {
         return commonKatakanaNameColors.count
     }

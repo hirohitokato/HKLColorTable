@@ -30,6 +30,8 @@
 		1AE623441CC27D090076D526 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AE623421CC27D090076D526 /* LaunchScreen.storyboard */; };
 		1AE623491CC282EC0076D526 /* HKLColorTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC8BFFD1CC1F69B00ABFE56 /* HKLColorTable.framework */; };
 		1AE6234A1CC282EC0076D526 /* HKLColorTable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC8BFFD1CC1F69B00ABFE56 /* HKLColorTable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1AE6234F1CC3674E0076D526 /* ColorListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE6234E1CC3674E0076D526 /* ColorListViewController.swift */; };
+		1AE623511CC379690076D526 /* HKLColorTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE623501CC379690076D526 /* HKLColorTable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +95,8 @@
 		1AE623401CC27D090076D526 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1AE623431CC27D090076D526 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1AE623451CC27D090076D526 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AE6234E1CC3674E0076D526 /* ColorListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorListViewController.swift; sourceTree = "<group>"; };
+		1AE623501CC379690076D526 /* HKLColorTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HKLColorTable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +181,7 @@
 		1AC8C0221CC1F88C00ABFE56 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				1AE623501CC379690076D526 /* HKLColorTable.swift */,
 				1AC8C0201CC1F88600ABFE56 /* JpnJISColors.swift */,
 				1AE623201CC247270076D526 /* JpnColors.swift */,
 				1AE623241CC272C80076D526 /* CommonColors.swift */,
@@ -205,6 +210,7 @@
 			children = (
 				1AE623391CC27D090076D526 /* AppDelegate.swift */,
 				1AE6233B1CC27D090076D526 /* RootViewController.swift */,
+				1AE6234E1CC3674E0076D526 /* ColorListViewController.swift */,
 				1AE6233D1CC27D090076D526 /* Main.storyboard */,
 				1AE623401CC27D090076D526 /* Assets.xcassets */,
 				1AE623421CC27D090076D526 /* LaunchScreen.storyboard */,
@@ -357,6 +363,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AE623511CC379690076D526 /* HKLColorTable.swift in Sources */,
 				1AE623251CC272C80076D526 /* CommonColors.swift in Sources */,
 				1AE623301CC279F80076D526 /* ColorTable-CommonColor.swift in Sources */,
 				1AE6232E1CC279980076D526 /* ColorTable-WebColor.swift in Sources */,
@@ -384,6 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AE6233C1CC27D090076D526 /* RootViewController.swift in Sources */,
+				1AE6234F1CC3674E0076D526 /* ColorListViewController.swift in Sources */,
 				1AE6233A1CC27D090076D526 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

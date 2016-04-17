@@ -150,34 +150,17 @@ public enum WebColor: Int {
     case Mediumpurple           // Webカラーネーム mediumpurple / 0x9370DB
     case Slateblue              // Webカラーネーム slateblue / 0x6A5ACD
     case Mediumslateblue        // Webカラーネーム mediumslateblue / 0x7B68EE
+}
 
-    /**
-     Returns japanese name of the color
-     - returns: the color name
-     */
+extension WebColor: HKLColorTableRepresentable {
     public func name() -> String {
         return webNameColors[self.rawValue].name
     }
 
-    /**
-     Returns UIColor object of the color
-     - returns: UIColor object
-     */
     public func uiColor() -> UIColor {
         return UIColor(hexValue: webNameColors[self.rawValue].hex)
     }
 
-    /**
-     Returns CGColor object of the color
-     - returns: CGColor object
-     */
-    public func cgColor() -> CGColor {
-        return self.uiColor().CGColor
-    }
-
-    /**
-     Returns the number of colors
-     */
     public func count() -> Int {
         return webNameColors.count
     }

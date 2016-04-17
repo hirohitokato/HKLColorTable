@@ -277,34 +277,17 @@ public enum JpnJISColor: Int {
     case CharcoalGrey     // JIS慣用色名 チャコールグレイ / 0x4c444d
     case LampBlack        // JIS慣用色名 ランプブラック / 0x221816
     case Black            // JIS慣用色名 ブラック / 0x0d0116
+}
 
-    /**
-     Returns japanese name of the color
-     - returns: the color name
-     */
+extension JpnJISColor: HKLColorTableRepresentable {
     public func name() -> String {
         return jpnJISColors[self.rawValue].name
     }
 
-    /**
-     Returns UIColor object of the color
-     - returns: UIColor object
-     */
     public func uiColor() -> UIColor {
         return UIColor(hexValue: jpnJISColors[self.rawValue].hex)
     }
 
-    /**
-     Returns CGColor object of the color
-     - returns: CGColor object
-     */
-    public func cgColor() -> CGColor {
-        return self.uiColor().CGColor
-    }
-
-    /**
-     Returns the number of colors
-     */
     public func count() -> Int {
         return jpnJISColors.count
     }
