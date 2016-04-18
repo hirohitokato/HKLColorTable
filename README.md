@@ -11,6 +11,10 @@ It supports the following color tables:
 
 Each color is defined as enum elements, you can easily use it with IDE's code completion.
 
+# Technical requirements
+
+- iOS: 8.0 or higher
+
 # How to use
 
 ## Installation
@@ -20,13 +24,11 @@ Each color is defined as enum elements, you can easily use it with IDE's code co
 ### CocoaPods
 
 ## Import
-First of all, import the framework on your source code.
+First of all, import the framework and you should be ready to go.
 
 ```swift
 import HKLColorTable
 ```
-
-Then, you can use all colors supported by it.
 
 ## Get Colors
 
