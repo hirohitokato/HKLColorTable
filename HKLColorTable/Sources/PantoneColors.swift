@@ -1058,15 +1058,15 @@ public enum PantoneColor: Int {
 }
 
 extension PantoneColor: HKLColorTableRepresentable {
-    public func name() -> String {
+    public var name: String {
         return "PANTONE \(pantoneColors[self.rawValue].name)"
     }
 
-    public func uiColor() -> UIColor {
+    public var uiColor: UIColor {
         return UIColor(hexValue: pantoneColors[self.rawValue].hex)
     }
 
-    public func count() -> Int {
+    public var count: Int {
         return pantoneColors.count
     }
 }

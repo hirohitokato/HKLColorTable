@@ -153,15 +153,15 @@ public enum WebColor: Int {
 }
 
 extension WebColor: HKLColorTableRepresentable {
-    public func name() -> String {
+    public var name: String {
         return webNameColors[self.rawValue].name
     }
 
-    public func uiColor() -> UIColor {
+    public var uiColor: UIColor {
         return UIColor(hexValue: webNameColors[self.rawValue].hex)
     }
 
-    public func count() -> Int {
+    public var count: Int {
         return webNameColors.count
     }
 }

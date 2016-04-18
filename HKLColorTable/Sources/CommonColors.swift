@@ -298,15 +298,15 @@ public enum CommonColor: Int {
 }
 
 extension CommonColor: HKLColorTableRepresentable {
-    public func name() -> String {
+    public var name: String {
         return commonKatakanaNameColors[self.rawValue].name
     }
     
-    public func uiColor() -> UIColor {
+    public var uiColor: UIColor {
         return UIColor(hexValue: commonKatakanaNameColors[self.rawValue].hex)
     }
     
-    public func count() -> Int {
+    public var count: Int {
         return commonKatakanaNameColors.count
     }
 }

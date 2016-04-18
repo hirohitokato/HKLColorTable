@@ -13,29 +13,29 @@ public protocol HKLColorTableRepresentable {
      Returns japanese name of the color
      - returns: the color name
      */
-    func name() -> String
+    var name: String { get }
 
     /**
      Returns UIColor object of the color
      - returns: UIColor object
      */
-    func uiColor() -> UIColor
+    var uiColor: UIColor { get }
 
     /**
      Returns CGColor object of the color
      - returns: CGColor object
      */
-    func cgColor() -> CGColor
+    var cgColor: CGColor { get }
 
     /**
-     Returns the total number of colors
+     Returns the total number of colors in the table (ugly...)
      */
-    func count() -> Int
+    var count: Int { get }
 }
 
 // default implementation
 extension HKLColorTableRepresentable {
-    public func cgColor() -> CGColor {
-        return self.uiColor().CGColor
+    public var cgColor: CGColor {
+        return self.uiColor.CGColor
     }
 }

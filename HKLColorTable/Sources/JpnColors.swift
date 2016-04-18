@@ -478,15 +478,15 @@ public enum JpnColor: Int {
 }
 
 extension JpnColor: HKLColorTableRepresentable {
-    public func name() -> String {
+    public var name: String {
         return jpnColors[self.rawValue].name
     }
 
-    public func uiColor() -> UIColor {
+    public var uiColor: UIColor {
         return UIColor(hexValue: jpnColors[self.rawValue].hex)
     }
 
-    public func count() -> Int {
+    public var count: Int {
         return jpnColors.count
     }
 }
