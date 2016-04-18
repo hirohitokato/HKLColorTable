@@ -8,7 +8,7 @@
 Pod::Spec.new do |s|
   s.name             = "HKLColorTable"
   s.version          = "0.1.0"
-  s.summary          = "Color library of Japanese colors."
+  s.summary          = "Traditional japanese/JIS/PANTONE UIColor library. Written in Swift."
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -29,9 +29,9 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'HKLColorTable/Sources/**/*'
-
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+
+  s.frameworks = 'UIKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end
 
