@@ -11,7 +11,6 @@
 		1AC8C0081CC1F69B00ABFE56 /* HKLColorTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC8BFFD1CC1F69B00ABFE56 /* HKLColorTable.framework */; };
 		1AC8C00D1CC1F69B00ABFE56 /* HKLColorTableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC8C00C1CC1F69B00ABFE56 /* HKLColorTableTests.swift */; };
 		1AC8C0211CC1F88600ABFE56 /* JpnJISColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC8C0201CC1F88600ABFE56 /* JpnJISColors.swift */; };
-		1AC8C02A1CC2306900ABFE56 /* SUColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AC8C0261CC2306900ABFE56 /* SUColor.h */; };
 		1AE6231E1CC23C930076D526 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 1AE6231D1CC23C930076D526 /* LICENSE */; };
 		1AE6231F1CC23DC80076D526 /* ColorTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC8C02C1CC2396400ABFE56 /* ColorTable.swift */; };
 		1AE623211CC247270076D526 /* JpnColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE623201CC247270076D526 /* JpnColors.swift */; };
@@ -66,6 +65,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1A255F3F1CC49ED700D76C19 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		1A255F411CC49F3600D76C19 /* HKLColorTable.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = HKLColorTable.podspec; sourceTree = "<group>"; };
 		1AC8BFFD1CC1F69B00ABFE56 /* HKLColorTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HKLColorTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AC8C0001CC1F69B00ABFE56 /* HKLColorTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HKLColorTable.h; sourceTree = "<group>"; };
 		1AC8C0021CC1F69B00ABFE56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -73,10 +74,6 @@
 		1AC8C00C1CC1F69B00ABFE56 /* HKLColorTableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKLColorTableTests.swift; sourceTree = "<group>"; };
 		1AC8C00E1CC1F69B00ABFE56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AC8C0201CC1F88600ABFE56 /* JpnJISColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JpnJISColors.swift; sourceTree = "<group>"; };
-		1AC8C0241CC2306900ABFE56 /* KSColorTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSColorTable.h; sourceTree = "<group>"; };
-		1AC8C0251CC2306900ABFE56 /* KSColorTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSColorTable.m; sourceTree = "<group>"; };
-		1AC8C0261CC2306900ABFE56 /* SUColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUColor.h; sourceTree = "<group>"; };
-		1AC8C0271CC2306900ABFE56 /* SUColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUColor.m; sourceTree = "<group>"; };
 		1AC8C02C1CC2396400ABFE56 /* ColorTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTable.swift; sourceTree = "<group>"; };
 		1AE6231D1CC23C930076D526 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		1AE623201CC247270076D526 /* JpnColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JpnColors.swift; sourceTree = "<group>"; };
@@ -129,6 +126,9 @@
 		1AC8BFF31CC1F69B00ABFE56 = {
 			isa = PBXGroup;
 			children = (
+				1A255F3F1CC49ED700D76C19 /* README.md */,
+				1A255F411CC49F3600D76C19 /* HKLColorTable.podspec */,
+				1AE6231D1CC23C930076D526 /* LICENSE */,
 				1AC8BFFF1CC1F69B00ABFE56 /* HKLColorTable */,
 				1AE623381CC27D090076D526 /* ColorTable */,
 				1AC8C00B1CC1F69B00ABFE56 /* HKLColorTableTests */,
@@ -152,8 +152,6 @@
 				1AC8C0001CC1F69B00ABFE56 /* HKLColorTable.h */,
 				1AC8C0021CC1F69B00ABFE56 /* Info.plist */,
 				1AC8C0221CC1F88C00ABFE56 /* Sources */,
-				1AC8C0171CC1F72000ABFE56 /* SUColor */,
-				1AE6231D1CC23C930076D526 /* LICENSE */,
 			);
 			path = HKLColorTable;
 			sourceTree = "<group>";
@@ -165,17 +163,6 @@
 				1AC8C00E1CC1F69B00ABFE56 /* Info.plist */,
 			);
 			path = HKLColorTableTests;
-			sourceTree = "<group>";
-		};
-		1AC8C0171CC1F72000ABFE56 /* SUColor */ = {
-			isa = PBXGroup;
-			children = (
-				1AC8C0241CC2306900ABFE56 /* KSColorTable.h */,
-				1AC8C0251CC2306900ABFE56 /* KSColorTable.m */,
-				1AC8C0261CC2306900ABFE56 /* SUColor.h */,
-				1AC8C0271CC2306900ABFE56 /* SUColor.m */,
-			);
-			path = SUColor;
 			sourceTree = "<group>";
 		};
 		1AC8C0221CC1F88C00ABFE56 /* Sources */ = {
@@ -226,7 +213,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AC8C02A1CC2306900ABFE56 /* SUColor.h in Headers */,
 				1AC8C0011CC1F69B00ABFE56 /* HKLColorTable.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -638,6 +624,7 @@
 				1AE623481CC27D090076D526 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
